@@ -12,6 +12,9 @@ var queryType = process.argv[2];
 var songName = "";
 var movieName = "";
 
+var hamfist = "spotify-this-song";
+
+
 
 switch(queryType){
 
@@ -75,8 +78,6 @@ function spots(songName){
 		id: "5649455098d640baa231097b878b1e47",
 		secret: "126590baf21b4b8f9669da5bbd88fca4"
 	});
-
-
 
 
 	for (var i = 3; i < nodeArgs.length; i++) {
@@ -152,9 +153,11 @@ function texts(){
 	fs.readFile("random.txt", "utf8", function(error, data) {
 	
 		var readArray = data.split(",");
-		process.argv[3] = readArray[0];
-		process.argv[4] = readArray[1];
-		spots();
+
+		if (readArray[0] = hamfist){
+			nodeArgs[3] = readArray[1];
+			spots(songName);
+		}
 
 	});
 };

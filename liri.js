@@ -79,6 +79,7 @@ function spots(songName){
 		secret: "126590baf21b4b8f9669da5bbd88fca4"
 	});
 
+	songName = "";
 
 	for (var i = 3; i < nodeArgs.length; i++) {
 
@@ -112,6 +113,8 @@ function spots(songName){
 
 
 function films(movieName){
+
+	movieName = "";
 
 	for (var j = 3; j < nodeArgs.length; j++) {
 
@@ -156,7 +159,7 @@ function texts(){
 
 		if (readArray[0] = hamfist){
 			nodeArgs[3] = readArray[1];
-			spots(songName);
+			spots();
 		}
 
 	});
